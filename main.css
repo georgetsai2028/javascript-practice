@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-size: 100px;
+    display: flex;
+    border-radius: 1rem;
+}
+
+button:hover{
+    background-color: pink;
+}

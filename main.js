@@ -31,4 +31,5 @@ function displayLibrary(){
 }
 
 addBookToLibrary("Hobbit", "J.R.R Tolkien", 255);
+addBookToLibrary("Lord of the Rings", "J.R.R Tolkien", 895);
 displayLibrary();
