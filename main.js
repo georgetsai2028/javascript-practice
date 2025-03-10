@@ -10,10 +10,11 @@ function Book(title, author, pages){
     this.info = function(){
         console.log(this.title);
         console.log(this.author);
-        console.log("This book has ", this.pages)
+        console.log("This book has ", this.pages, "pages")
     }
 
 }
 
 const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295);
 
+console.log(theHobbit.info());
