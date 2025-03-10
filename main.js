@@ -2,12 +2,13 @@ const myLibrary = [];
 
 function Book(title, author, pages, id){
 
-   /* if(!new.target){
+   if (!new.target){
         throw Error("Cant use with withou new operator");
-    };*/
+    };
     this.title = title;
     this.author = author;
     this.pages = pages;
+    this.id = crypto.randomUUID();
 
     this.info = function(){
         console.log(this.title);
@@ -18,17 +19,14 @@ function Book(title, author, pages, id){
 }
 
 function addBookToLibrary(title, author, pages){
-    Book.title = title;
-    Book.author = author;
-    Book.pages = pages;
-    Book.id = crypto.randomUUID();
-    myLibrary.push(Book);
+    const book = new Book(title, author, pages);
+    myLibrary.push(book);
 }
 
 function displayLibrary(){
     for (let i = 0; i < myLibrary.length; i++)
     {
-        console.log (myLibrary[i]);
+        console.log(myLibrary[i]);
     }
 }
 
