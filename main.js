@@ -1,8 +1,10 @@
-function Book(title, author, pages){
+const myLibrary = [];
 
-    if(!new.target){
+function Book(title, author, pages, id){
+
+   /* if(!new.target){
         throw Error("Cant use with withou new operator");
-    };
+    };*/
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -15,6 +17,20 @@ function Book(title, author, pages){
 
 }
 
-const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295);
+function addBookToLibrary(title, author, pages){
+    Book.title = title;
+    Book.author = author;
+    Book.pages = pages;
+    Book.id = crypto.randomUUID();
+    myLibrary.push(Book);
+}
 
-console.log(theHobbit.info());
+function displayLibrary(){
+    for (let i = 0; i < myLibrary.length; i++)
+    {
+        console.log (myLibrary[i]);
+    }
+}
+
+addBookToLibrary("Hobbit", "J.R.R Tolkien", 255);
+displayLibrary();
